@@ -85,8 +85,8 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg font-comic text-stone-700 dark:text-stone-300 mb-6 leading-relaxed">
-              I'm a dedicated student pursuing electrical and AI engineering at Western University, 
-              where I'm developing expertise in both hardware design and machine learning applications.
+              I&apos;m a dedicated student pursuing electrical and AI engineering at Western University, 
+              where I&apos;m developing expertise in both hardware design and machine learning applications.
             </p>
             <p className="text-lg font-comic text-stone-700 dark:text-stone-300 mb-6 leading-relaxed">
               My passion lies in creating intelligent systems that can sense, process, and respond to 
@@ -241,7 +241,7 @@ export default function Home() {
           Get In Touch
         </h2>
         <p className="text-lg font-comic text-stone-700 dark:text-stone-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-          I'm always interested in discussing new opportunities, collaborations, or just having a chat about 
+          I&apos;m always interested in discussing new opportunities, collaborations, or just having a chat about 
           electrical engineering and AI. Feel free to reach out!
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
