@@ -63,14 +63,14 @@ export default function Home() {
           >
             Get In Touch
           </button>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-stone-200 hover:bg-stone-300 dark:bg-stone-700 dark:hover:bg-stone-600 text-stone-800 dark:text-stone-200 font-comic px-8 py-3 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
-          >
-            Follow on Twitter
-          </a>
+           <a
+             href="https://x.com/michael_trbo"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="bg-stone-200 hover:bg-stone-300 dark:bg-stone-700 dark:hover:bg-stone-600 text-stone-800 dark:text-stone-200 font-comic px-8 py-3 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+           >
+             Follow on Twitter
+           </a>
         </div>
       </div>
     </section>
@@ -251,14 +251,14 @@ export default function Home() {
           >
             Send Email
           </button>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-stone-200 hover:bg-stone-300 dark:bg-stone-700 dark:hover:bg-stone-600 text-stone-800 dark:text-stone-200 font-comic px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl text-lg"
-          >
-            Connect on Twitter
-          </a>
+           <a
+             href="https://x.com/michael_trbo"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="bg-stone-200 hover:bg-stone-300 dark:bg-stone-700 dark:hover:bg-stone-600 text-stone-800 dark:text-stone-200 font-comic px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl text-lg"
+           >
+             Connect on Twitter
+           </a>
         </div>
         <div className="mt-12 text-center">
           <p className="font-comic text-stone-600 dark:text-stone-400">
