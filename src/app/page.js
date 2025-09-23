@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
@@ -10,19 +11,26 @@ export default function Home() {
   };
 
   const ProfilePicture = () => (
-    <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-gradient-to-br from-amber-200 to-orange-300 flex items-center justify-center text-4xl sm:text-6xl font-comic text-amber-800 shadow-lg mx-auto">
-      MT
+    <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-lg mx-auto">
+      <Image
+        src="/ACEBHeadshot.png"
+        alt="Michael Trbovic"
+        width={192}
+        height={192}
+        className="w-full h-full object-cover"
+        priority
+      />
     </div>
   );
 
   const Navigation = () => (
-    <nav className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-stone-900/90 backdrop-blur-sm z-50 border-b border-amber-200 dark:border-amber-800">
+    <nav className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-stone-900/90 backdrop-blur-sm z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-5">
         <div className="flex justify-between items-center">
           {activeSection !== 'home' && (
             <button
               onClick={() => setActiveSection('home')}
-              className="text-left text-xl sm:text-2xl font-comic font-bold text-amber-800 dark:text-amber-200 hover:text-amber-600 dark:hover:text-amber-300"
+              className="text-left text-xl sm:text-2xl font-comic font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 dark:hover:text-orange-300"
               aria-label="Go to Home"
             >
               Michael Trbovic
@@ -35,8 +43,8 @@ export default function Home() {
                 onClick={() => setActiveSection(section)}
                 className={`font-comic capitalize transition-colors duration-200 text-sm sm:text-base ${
                   activeSection === section
-                    ? 'text-amber-600 dark:text-amber-400 font-semibold'
-                    : 'text-stone-600 dark:text-stone-400 hover:text-amber-600 dark:hover:text-amber-400'
+                    ? 'text-orange-600 dark:text-orange-400 font-semibold'
+                    : 'text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400'
                 }`}
               >
                 {section}
@@ -53,20 +61,20 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12">
           <ProfilePicture />
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-comic font-bold text-amber-800 dark:text-amber-200 mt-6 sm:mt-8 mb-3 sm:mb-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-comic font-bold text-orange-800 dark:text-orange-200 mt-6 sm:mt-8 mb-3 sm:mb-4">
             Michael Trbovic
           </h1>
           <h2 className="text-lg sm:text-xl lg:text-2xl font-comic text-stone-600 dark:text-stone-400">
             Electrical & AI Engineering Student at Western University
           </h2>
         </div>
-        <h2 className="text-3xl sm:text-4xl font-comic font-bold text-amber-800 dark:text-amber-200 mb-6 sm:mb-10 text-center">
+        <h2 className="text-3xl sm:text-4xl font-comic font-bold text-orange-800 dark:text-orange-200 mb-6 sm:mb-10 text-center">
           About Me
         </h2>
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl sm:text-2xl font-comic font-semibold text-amber-700 dark:text-amber-300 mb-4">
+              <h3 className="text-xl sm:text-2xl font-comic font-semibold text-orange-700 dark:text-orange-300 mb-4">
                 Education
               </h3>
               <div className="bg-amber-50 dark:bg-stone-800 p-6 rounded-lg">
@@ -88,7 +96,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="text-xl sm:text-2xl font-comic font-semibold text-amber-700 dark:text-amber-300 mb-4">
+              <h3 className="text-xl sm:text-2xl font-comic font-semibold text-orange-700 dark:text-orange-300 mb-4">
                 Technical Skills
               </h3>
               <div className="space-y-4">
@@ -117,7 +125,7 @@ export default function Home() {
 
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl sm:text-2xl font-comic font-semibold text-amber-700 dark:text-amber-300 mb-4">
+              <h3 className="text-xl sm:text-2xl font-comic font-semibold text-orange-700 dark:text-orange-300 mb-4">
                 Professional Philosophy
               </h3>
               <p className="font-comic text-stone-700 dark:text-stone-300 mb-4 leading-relaxed">
@@ -133,21 +141,21 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="text-xl sm:text-2xl font-comic font-semibold text-amber-700 dark:text-amber-300 mb-4">
+              <h3 className="text-xl sm:text-2xl font-comic font-semibold text-orange-700 dark:text-orange-300 mb-4">
                 Contact Information
               </h3>
               <div className="bg-stone-100 dark:bg-stone-700 p-6 rounded-lg space-y-2">
                 <p className="font-comic text-stone-700 dark:text-stone-300">
-                  <span className="font-semibold">Email:</span> <a href="mailto:michael.trbo@gmail.com" className="text-amber-700 dark:text-amber-300 hover:underline">michael.trbo@gmail.com</a>
+                  <span className="font-semibold">Email:</span> <a href="mailto:michael.trbo@gmail.com" className="text-orange-700 dark:text-orange-300 hover:underline">michael.trbo@gmail.com</a>
                 </p>
                 <p className="font-comic text-stone-700 dark:text-stone-300">
-                  <span className="font-semibold">LinkedIn:</span> <a href="https://linkedin.com/in/michaeltrbovic" target="_blank" rel="noopener noreferrer" className="text-amber-700 dark:text-amber-300 hover:underline">linkedin.com/in/michaeltrbovic</a>
+                  <span className="font-semibold">LinkedIn:</span> <a href="https://linkedin.com/in/michaeltrbovic" target="_blank" rel="noopener noreferrer" className="text-orange-700 dark:text-orange-300 hover:underline">linkedin.com/in/michaeltrbovic</a>
                 </p>
                 <p className="font-comic text-stone-700 dark:text-stone-300">
-                  <span className="font-semibold">GitHub:</span> <a href="https://github.com/michaeltrbo" target="_blank" rel="noopener noreferrer" className="text-amber-700 dark:text-amber-300 hover:underline">github.com/michaeltrbo</a>
+                  <span className="font-semibold">GitHub:</span> <a href="https://github.com/michaeltrbo" target="_blank" rel="noopener noreferrer" className="text-orange-700 dark:text-orange-300 hover:underline">github.com/michaeltrbo</a>
                 </p>
                 <p className="font-comic text-stone-700 dark:text-stone-300">
-                  <span className="font-semibold">X (Twitter):</span> <a href="https://x.com/michael_trbo" target="_blank" rel="noopener noreferrer" className="text-amber-700 dark:text-amber-300 hover:underline">x.com/michael_trbo</a>
+                  <span className="font-semibold">X (Twitter):</span> <a href="https://x.com/michael_trbo" target="_blank" rel="noopener noreferrer" className="text-orange-700 dark:text-orange-300 hover:underline">x.com/michael_trbo</a>
                 </p>
               </div>
             </div>
@@ -160,14 +168,14 @@ export default function Home() {
   const ExperienceSection = () => (
     <section className="min-h-screen flex items-center justify-center pt-24 sm:pt-28 pb-12 sm:pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-comic font-bold text-amber-800 dark:text-amber-200 mb-8 sm:mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-comic font-bold text-orange-800 dark:text-orange-200 mb-8 sm:mb-12 text-center">
           Professional Experience
         </h2>
         <div className="space-y-8">
           <div className="bg-white dark:bg-stone-800 p-6 sm:p-8 rounded-lg shadow-lg">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
               <div>
-                <h3 className="text-xl sm:text-2xl font-comic font-semibold text-amber-800 dark:text-amber-200">
+                <h3 className="text-xl sm:text-2xl font-comic font-semibold text-orange-800 dark:text-orange-200">
                   Lead Electrical Engineer
                 </h3>
                 <p className="font-comic text-stone-600 dark:text-stone-400 text-lg">
@@ -197,7 +205,7 @@ export default function Home() {
           </div>
 
           <div className="bg-amber-50 dark:bg-stone-800 p-6 sm:p-8 rounded-lg">
-            <h3 className="text-xl sm:text-2xl font-comic font-semibold text-amber-800 dark:text-amber-200 mb-6">
+            <h3 className="text-xl sm:text-2xl font-comic font-semibold text-orange-800 dark:text-orange-200 mb-6">
               Extracurricular Activities
             </h3>
             <div className="space-y-6">
@@ -239,7 +247,7 @@ export default function Home() {
   const ProjectsSection = () => (
     <section className="min-h-screen flex items-center justify-center pt-24 sm:pt-28 pb-12 sm:pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-comic font-bold text-amber-800 dark:text-amber-200 mb-8 sm:mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-comic font-bold text-orange-800 dark:text-orange-200 mb-8 sm:mb-12 text-center">
           My Projects
         </h2>
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
@@ -268,7 +276,7 @@ export default function Home() {
           ].map((project, index) => (
             <div key={index} className="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                <h3 className="text-lg sm:text-xl font-comic font-semibold text-amber-800 dark:text-amber-200 mb-2 sm:mb-0">
+                <h3 className="text-lg sm:text-xl font-comic font-semibold text-orange-800 dark:text-orange-200 mb-2 sm:mb-0">
                   {project.title === 'ThermalVision: Object Detection for Autonomous Vehicles' ? (
                     <a href="https://github.com/michaeltrbo/Western-GM-Hidden-Insights-Challenge" target="_blank" rel="noopener noreferrer" className="hover:underline">
                       {project.title}
@@ -281,7 +289,7 @@ export default function Home() {
                   <span className={`px-3 py-1 rounded-full text-xs sm:text-sm font-comic ${
                     project.status === 'Completed' 
                       ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-                      : 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200'
+                      : 'bg-amber-100 text-orange-800 dark:bg-amber-900 dark:text-orange-200'
                   }`}>
                     {project.status}
                   </span>
@@ -297,7 +305,7 @@ export default function Home() {
                 {project.tech.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2 sm:px-3 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full text-xs sm:text-sm font-comic"
+                    className="px-2 sm:px-3 py-1 bg-amber-100 dark:bg-amber-900 text-orange-800 dark:text-orange-200 rounded-full text-xs sm:text-sm font-comic"
                   >
                     {tech}
                   </span>
@@ -313,7 +321,7 @@ export default function Home() {
   const ContactSection = () => (
     <section className="min-h-screen flex items-center justify-center pt-24 sm:pt-28 pb-12 sm:pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <h2 className="text-3xl sm:text-4xl font-comic font-bold text-amber-800 dark:text-amber-200 mb-6 sm:mb-8">
+        <h2 className="text-3xl sm:text-4xl font-comic font-bold text-orange-800 dark:text-orange-200 mb-6 sm:mb-8">
           Get In Touch
         </h2>
         <p className="text-base sm:text-lg font-comic text-stone-700 dark:text-stone-300 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
