@@ -1,10 +1,20 @@
-import { Comic_Neue } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const comicNeue = Comic_Neue({
-  variable: "--font-comic",
+const inter = Inter({
+  variable: "--font-comic", // keep the same CSS variable to avoid refactors
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: [
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900",
+  ],
 });
 
 export const metadata = {
@@ -16,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${comicNeue.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         {children}
       </body>
