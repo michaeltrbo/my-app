@@ -264,7 +264,8 @@ export default function Home() {
               description: "Developed a YOLO object detection system to detect cars, pedestrians, and cyclists using thermal imaging technology. Optimized model inference on Raspberry Pi 5 using ONNX and 8-bit quantization for real-time performance, enabling autonomous vehicles to navigate safely in low-visibility conditions such as nighttime. Processed thermal camera frames to enhance obstacle detection capabilities and designed a comprehensive evaluation pipeline to measure model accuracy and efficiency.",
               tech: ["Python", "YOLO", "PyTorch", "ONNX", "Raspberry Pi"],
               status: "Completed",
-              period: "March 2025"
+              period: "March 2025",
+              link: "https://github.com/michaeltrbo/Western-GM-Hidden-Insights-Challenge"
             },
             {
               title: "Moore FSM Sequence Detector",
@@ -272,13 +273,21 @@ export default function Home() {
               tech: ["Verilog", "Quartus", "FPGA", "FSM Design"],
               status: "Completed",
               period: "November 2024 - December 2024"
+            },
+            {
+              title: "MLP XOR Problem (NumPy from Scratch)",
+              description: "Built a 2–2–1 Multilayer Perceptron (MLP) from scratch in Python/NumPy to learn the classic XOR problem—an archetypal non-linearly separable task that requires hidden layers and nonlinear activations. Implemented forward propagation and backpropagation by hand, carefully debugging activation behavior, gradient scaling, and learning rate stability. After fixing output activation and averaging gradients exactly once, and tuning the learning rate (~0.1), the network converged to correct XOR outputs (≈[0, 1, 1, 0]). This project reinforced the fundamentals of neural networks beyond frameworks.",
+              tech: ["Python", "NumPy", "MLP", "Backpropagation"],
+              status: "Completed",
+              period: "2025",
+              link: "https://github.com/michaeltrbo/mlp-xor-problem"
             }
           ].map((project, index) => (
             <div key={index} className="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                 <h3 className="text-lg sm:text-xl font-comic font-semibold text-orange-800 dark:text-orange-200 mb-2 sm:mb-0">
-                  {project.title === 'ThermalVision: Object Detection for Autonomous Vehicles' ? (
-                    <a href="https://github.com/michaeltrbo/Western-GM-Hidden-Insights-Challenge" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  {project.link ? (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
                       {project.title}
                     </a>
                   ) : (
