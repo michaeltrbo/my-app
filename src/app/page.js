@@ -253,6 +253,14 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
           {[
             {
+              title: "MLP XOR Problem (NumPy from Scratch)",
+              description: "Built a 2–2–1 Multilayer Perceptron (MLP) from scratch in Python/NumPy to learn the classic XOR problem—an archetypal non-linearly separable task that requires hidden layers and nonlinear activations. Implemented forward propagation and backpropagation by hand, carefully debugging activation behavior, gradient scaling, and learning rate stability. After fixing output activation and averaging gradients exactly once, and tuning the learning rate (~0.1), the network converged to correct XOR outputs (≈[0, 1, 1, 0]). This project reinforced the fundamentals of neural networks beyond frameworks.",
+              tech: ["Python", "NumPy", "MLP", "Backpropagation"],
+              status: "Completed",
+              period: "2025",
+              link: "https://github.com/michaeltrbo/mlp-xor-problem"
+            },
+            {
               title: "VCPU - 16-bit Virtual Computer",
               description: "Designed and implemented a complete computer system from the ground up using Hardware Description Language. Built key digital logic components including multiplexers, adders, registers, RAM modules, ALU, and CPU, integrating them into a fully functional 16-bit computer capable of executing machine instructions. Applied concepts of digital logic design, sequential circuits, and computer architecture to create a comprehensive understanding of computer systems at the hardware level.",
               tech: ["HDL", "Verilog", "Digital Logic", "Computer Architecture"],
@@ -273,14 +281,6 @@ export default function Home() {
               tech: ["Verilog", "Quartus", "FPGA", "FSM Design"],
               status: "Completed",
               period: "November 2024 - December 2024"
-            },
-            {
-              title: "MLP XOR Problem (NumPy from Scratch)",
-              description: "Built a 2–2–1 Multilayer Perceptron (MLP) from scratch in Python/NumPy to learn the classic XOR problem—an archetypal non-linearly separable task that requires hidden layers and nonlinear activations. Implemented forward propagation and backpropagation by hand, carefully debugging activation behavior, gradient scaling, and learning rate stability. After fixing output activation and averaging gradients exactly once, and tuning the learning rate (~0.1), the network converged to correct XOR outputs (≈[0, 1, 1, 0]). This project reinforced the fundamentals of neural networks beyond frameworks.",
-              tech: ["Python", "NumPy", "MLP", "Backpropagation"],
-              status: "Completed",
-              period: "2025",
-              link: "https://github.com/michaeltrbo/mlp-xor-problem"
             }
           ].map((project, index) => (
             <div key={index} className="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200">
